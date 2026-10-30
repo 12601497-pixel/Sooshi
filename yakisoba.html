@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yakisoba · Sooshi</title>
+  <link rel="icon" type="logo-sooshi/png" href="logo-sooshi.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700;800&family=Italiana&family=Lexend+Exa:wght@600;700&family=Niconne&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="yakisoba.css">
+  <link rel="stylesheet" href="sacola.css">
+  <script src="sacola.js" defer></script>
+  <script src="sessao.js" defer></script>
+  <script src="busca.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topo">
+    <div class="esq">
+      <a href="index.html" class="logo">
+        <img src="logo-sooshi.png" alt="" />
+        <span id="nomeLogo">Sooshi</span>
+      </a>
+      <div class="busca">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <path d="M21 21l-4.3-4.3" />
+        </svg>
+        <input type="text" placeholder="Buscar" aria-label="Buscar" />
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="Conta.html" class="entrar">Entrar</a>
+
+      <div class="cidadebox" id="caixaCidade">
+        <button type="button" class="btncidade" id="btnCidade" aria-haspopup="listbox" aria-expanded="false">
+          <span id="cidadeAtual">Sua Região</span>
+          <svg viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+
+        <ul class="listacidades" id="listaCidade" role="listbox">
+          <li role="option">Savassi</li>
+          <li role="option">Pampulha</li>
+          <li role="option">Castelo</li>
+          <li role="option">Lurdes</li>
+          <li role="option">Barreiro</li>
+        </ul>
+      </div>
+
+      <button class="carrinho" aria-label="Carrinho">
+        <svg viewBox="0 0 24 24">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="pagina">
+
+    <a href="index.html" class="voltar">
+      <svg viewBox="0 0 24 24">
+        <path d="M9 14 4 9l5-5" />
+        <path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
+      </svg>
+      Voltar
+    </a>
+
+    <!-- Capa -->
+    <section class="capa">
+      <img class="capafoto" src="comida2.png" alt="Yakisoba" />
+      <div class="capatexto">
+        <h1 class="capatitulo">Yakisoba</h1>
+        <span class="capasub">Yakisoba</span>
+      </div>
+    </section>
+
+    <!-- Loja 1 -->
+    <section class="loja">
+      <h2 class="lojatitulo">
+        <img class="lojalogo" src="Logo (1).png" alt="" />
+        Sooshi Lourdes
+      </h2>
+      <div class="gradepratos">
+        <a href="#" class="prato">
+          <img class="fotoprato" src="Yakisoba (2).png" alt="Yakisoba Premium" />
+          <h3 class="nomeprato">Yakisoba Premium</h3>
+          <p class="precoprato">R$ 54,89</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="Yakisoba (1).png" alt="Combinado 24 peças" />
+          <h3 class="nomeprato">Yakisoba Xadrez</h3>
+          <p class="precoprato">R$ 40,29</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="Yakisoba (3).png" alt="Combinado 26 peças" />
+          <h3 class="nomeprato">Wok & Alma G</h3>
+          <p class="precoprato">R$ 44,89</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Loja 2 -->
+    <section class="loja">
+      <h2 class="lojatitulo">
+        <img class="lojalogo" src="Logo (3).png" alt="" />
+        Sooshi Savassi
+      </h2>
+      <div class="gradepratos">
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://guiadacozinha.com.br/wp-content/uploads/2019/11/yakisoba-de-frango-1.jpg" alt="Yakisoba Misto" />
+          <h3 class="nomeprato">Yakisoba Misto</h3>
+          <p class="precoprato">R$ 34,60</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBVD9inSJGSEkHds43B0VP1kwLYWW2ES7Z_383CxNA6Xk5sH4xdz6x87I&s=10" alt="Yakisoba de Carne" />
+          <h3 class="nomeprato">Yakisoba de Carne</h3>
+          <p class="precoprato">R$ 38,60</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://alloydeliveryimages.ligafiles.com.br/item_images/2781/66a14b7fd5446t7vxp.webp" alt="Yakisoba de Frutos do Mar" />
+          <h3 class="nomeprato">Yakisoba de Frutos do Mar</h3>
+          <p class="precoprato">R$ 62,90</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Loja 3 -->
+    <section class="loja">
+      <h2 class="lojatitulo">
+        <img class="lojalogo" src="Logo (2).png" alt="" />
+        Sooshi Castelo
+      </h2>
+      <div class="gradepratos">
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSXIdCzAhkeVfCP1SOFMBe1FnpJLITF7UFm3jTY441fuVVp0YOo" alt="Yakisoba Premium" />
+          <h3 class="nomeprato">Yakisoba Vegano com Tofu</h3>
+          <p class="precoprato">R$ 34,60</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSumwzMNqIHIeSXH3IKp6EUSRFfiAHIoQwiu0YFO_du5n10aDbS" alt="Combinado 24 peças" />
+          <h3 class="nomeprato">Yakisoba Premium com Bacon</h3>
+          <p class="precoprato">R$ 40,29</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl3T53kdJat0d4sywqpPe3d_HhD8GHzqh4ISN-AZIdy7UVXc5dOkHgmscf&s=10" alt="Combinado 26 peças" />
+          <h3 class="nomeprato">Yakisoba Fit com Macarrão de Shiritaki</h3>
+          <p class="precoprato">R$ 52,10</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="rodapegrade">
+
+      <div class="rodapemarca">
+        <a href="index.html" class="rodapelogo">
+          <img src="logo-sooshi.png" alt="" />
+          <span>Sooshi</span>
+        </a>
+        <p>Sushi fresquinho, feito na hora e entregue na sua porta.</p>
+
+        <div class="redes">
+          <a href="https://instagram.com/sooshi" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="https://wa.me/5531900000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24">
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+            </svg>
+          </a>
+          <a href="mailto:contato@sooshi.com.br" aria-label="E-mail">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Cardápio</h4>
+        <ul>
+          <li><a href="combinados.html">Combinados</a></li>
+          <li><a href="temaki.html">Temakis</a></li>
+          <li><a href="yakisoba.html">Yakisoba</a></li>
+          <li><a href="Poki.html">Poke</a></li>
+        </ul>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Sooshi</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="Conta.html">Minha conta</a></li>
+          <li><a href="#">Meus pedidos</a></li>
+          <li><a href="#">Cidades atendidas</a></li>
+        </ul>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Fale com a gente</h4>
+        <ul class="contatos">
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <a href="https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+MG" target="_blank"
+              rel="noopener">Belo Horizonte, MG</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <a href="tel:+5531900000000">(31) 97210-2286</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            <span>Todos os dias, 18h às 23h</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="direitos">
+      <p>© 2026 Sooshi. Todos os direitos reservados.</p>
+      <p><a href="#">Termos de uso</a> · <a href="#">Privacidade</a></p>
+    </div>
+  </footer>
+
+  <script src="yakisoba.js"></script>
+</body>
+
+</html>

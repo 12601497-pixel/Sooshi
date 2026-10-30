@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Niconne&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sooshi</title>
+  <link rel="icon" type="logo-sooshi/png" href="logo-sooshi.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="java.js" defer></script>
+  <link rel="stylesheet" href="sacola.css">
+  <script src="sacola.js" defer></script>
+  <script src="sessao.js" defer></script>
+  <script src="busca.js" defer></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__left">
+      <a href="#" class="header__logo">
+        <img src="logo-sooshi.png" alt="" />
+        <span id="cu">Sooshi</span>
+      </a>
+      <div class="header__search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="M21 21l-4.3-4.3" />
+        </svg>
+        <input type="text" placeholder="Buscar" aria-label="Buscar" />
+      </div>
+    </div>
+
+    <nav class="header__nav">
+      <a href="index.html">Início</a>
+      <a href="Conta.html" class="entrar">Entrar</a>
+
+      <div class="location-selector" id="locationContainer">
+        <button type="button" class="header__location" id="locationBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="selectedLocation">Sua Região</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+            aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+
+        <ul class="location-menu" id="locationMenu" role="listbox">
+          <li role="option">Savassi</li>
+          <li role="option">Pampulha</li>
+          <li role="option">Castelo</li>
+          <li role="option">Lurdes</li>
+          <li role="option">Barreiro</li>
+        </ul>
+      </div>
+
+      <button class="header__cart" aria-label="Carrinho">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <!-- Sec1 · Carrossel de promoções -->
+
+  <section class="promo-carrossel" aria-roledescription="carrossel" aria-label="Promoções">
+    <div class="promo-trilho">
+
+      <article class="promo" data-promo="2por1">
+        <div class="promo__content">
+          <h2 class="promosalmao">Promoção</h2>
+          <span class="prmo2">2 por 1</span>
+
+          <a href="temaki.html" class="promo__button">
+            Garanta já o seu!
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+        <img class="promo__image" src="Temaki.png" alt="Temaki de salmão" />
+      </article>
+
+      <article class="promo" data-promo="frete">
+        <div class="promo__content">
+          <h2 class="promosalmao promosalmao--menor">Frete grátis</h2>
+          <span class="prmo2">acima de R$ 80</span>
+
+          <a href="combinados.html" class="promo__button">
+            Peça agora
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+        <img class="promo__image" src="comida2.png" alt="Yakisoba" />
+      </article>
+
+      <article class="promo" data-promo="terca">
+        <div class="promo__content">
+          <h2 class="promosalmao promosalmao--menor">Terça do Temaki</h2>
+          <span class="prmo2">20% de desconto</span>
+
+          <a href="temaki.html" class="promo__button">
+            Ver temakis
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+        <img class="promo__image" src="Temaki.png" alt="Temaki de salmão" />
+      </article>
+
+      <article class="promo" data-promo="casal">
+        <div class="promo__content">
+          <h2 class="promosalmao promosalmao--menor">Combo casal</h2>
+          <span class="prmo2">preço fechado</span>
+
+          <a href="combinados.html" class="promo__button">
+            Quero o combo
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+        <img class="promo__image" src="comida4.png" alt="Combinado" />
+      </article>
+    </div>
+
+    <button type="button" class="promo-seta promo-seta--prev" aria-label="Promoção anterior">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="m15 6-6 6 6 6" />
+      </svg>
+    </button>
+    <button type="button" class="promo-seta promo-seta--next" aria-label="Próxima promoção">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="m9 6 6 6-6 6" />
+      </svg>
+    </button>
+
+    <div class="promo-bolinhas" role="group" aria-label="Escolher promoção"></div>
+  </section>
+
+  <!-- Sec2 -->
+
+  <section class="categories">
+    <a href="combinados.html" class="category-card">
+      <span class="category-card__tag"></span>
+      <h3 class="category-card__title">Combinados</h3>
+      <img class="category-card__img" src="comida4.png" alt="Combinados" />
+    </a>
+
+    <a href="temaki.html" class="category-card">
+      <span class="category-card__tag"></span>
+      <h3 class="category-card__title">Temakis</h3>
+      <img class="category-card__img" src="comida3.png" alt="Temakis" />
+    </a>
+
+    <a href="yakisoba.html" class="category-card">
+      <span class="category-card__tag"></span>
+      <h3 class="category-card__title">Yakisoba</h3>
+      <img class="category-card__img" src="comida2.png" alt="Yakisoba" />
+    </a>
+
+    <a href="Poki.html" class="category-card">
+      <span class="category-card__tag"></span>
+      <h3 class="category-card__title">Poke</h3>
+      <img class="category-card__img" src="comida1.png" alt="Poke" />
+    </a>
+  </section>
+
+  <!-- Sec3 -->
+
+  <section class="queridinhos">
+    <h2 class="tituloq">Queridinhos do Sooshi</h2>
+
+    <div class="gradeq">
+      <a href="" class="prato">
+        <img class="fotoprato" src="S2.png" alt="Combinado 26 peças" />
+        <h3 class="nomeprato">Combinado 26 peças</h3>
+        <p class="precoprato">R$ 54,89</p>
+      </a>
+
+      <a href="Poki.html" class="prato">
+        <img class="fotoprato" src="S3.png" alt="Poke Salmão e Edamame" />
+        <h3 class="nomeprato">Poke Salmão e Edamame</h3>
+        <p class="precoprato">R$ 59,52</p>
+      </a>
+
+      <a href="#" class="prato">
+        <img class="fotoprato" src="S1.png" alt="Temaki Salcheese" />
+        <h3 class="nomeprato">Temaki Salcheese</h3>
+        <p class="precoprato">R$ 39,90</p>
+      </a>
+    </div>
+  </section>
+  <!-- Unidades -->
+  <section class="unidades">
+    <h2 class="tituloq">Nossas Unidades</h2>
+
+    <div class="gradeun">
+      <a href="#" target="_blank" rel="noopener" class="unid">
+        <img src="Logo (3).png" alt="" />Sooshi Castelo
+      </a>
+      <a href="#" target="_blank" rel="noopener" class="unid">
+        <img src="Logo (2).png" alt="" />Sooshi Savassi
+      </a>
+      <a href="#" target="_blank" rel="noopener" class="unid">
+        <img src="Logo (1).png" alt="" />Sooshi Lourdes
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="rodapegrade">
+
+      <div class="rodapemarca">
+        <a href="#" class="rodapelogo">
+          <img src="logo-sooshi.png" alt="" />
+          <span>Sooshi</span>
+        </a>
+        <p>Sushi fresquinho, feito na hora e entregue na sua porta.</p>
+
+        <div class="redes">
+          <a href="https://instagram.com/sooshi" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="https://wa.me/5531900000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24">
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+            </svg>
+          </a>
+          <a href="mailto:contato@sooshi.com.br" aria-label="E-mail">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Cardápio</h4>
+        <ul>
+          <li><a href="combinados.html">Combinados</a></li>
+          <li><a href="temaki.html">Temakis</a></li>
+          <li><a href="yakisoba.html">Yakisoba</a></li>
+          <li><a href="Poki.html">Poke</a></li>
+        </ul>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Sooshi</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="Conta.html">Minha conta</a></li>
+          <li><a href="Conta.html">Meus pedidos</a></li>
+          <li><a href="#">Cidades atendidas</a></li>
+        </ul>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Fale com a gente</h4>
+        <ul class="contatos">
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <a href="https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+MG" target="_blank"
+              rel="noopener">Belo Horizonte, MG</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <a href="tel:+5531900000000">(31) 97210-2286</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            <span>Todos os dias, 18h às 23h</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="direitos">
+      <p>© 2026 Sooshi. Todos os direitos reservados.</p>
+      <p><a href="#">Termos de uso</a> · <a href="#">Privacidade</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>

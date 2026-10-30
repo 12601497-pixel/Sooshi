@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temaki · Sooshi</title>
+  <link rel="icon" type="logo-sooshi/png" href="logo-sooshi.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700;800&family=Italiana&family=Lexend+Exa:wght@600;700&family=Niconne&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="temaki.css">
+  <script src="temaki.js" defer></script>
+  <link rel="stylesheet" href="sacola.css">
+  <script src="sacola.js" defer></script>
+  <script src="sessao.js" defer></script>
+  <script src="busca.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topo">
+    <div class="esq">
+      <a href="index.html" class="logo">
+        <img src="logo-sooshi.png" alt="" />
+        <span id="nomeLogo">Sooshi</span>
+      </a>
+      <div class="busca">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <path d="M21 21l-4.3-4.3" />
+        </svg>
+        <input type="text" placeholder="Buscar" aria-label="Buscar" />
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="Conta.html" class="entrar">Entrar</a>
+
+      <div class="cidadebox" id="caixaCidade">
+        <button type="button" class="btncidade" id="btnCidade" aria-haspopup="listbox" aria-expanded="false">
+          <span id="cidadeAtual">Sua Região</span>
+          <svg viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+
+        <ul class="listacidades" id="listaCidade" role="listbox">
+          <li role="option">Savassi</li>
+          <li role="option">Pampulha</li>
+          <li role="option">Castelo</li>
+          <li role="option">Lurdes</li>
+          <li role="option">Barreiro</li>
+        </ul>
+      </div>
+
+      <button class="carrinho" aria-label="Carrinho">
+        <svg viewBox="0 0 24 24">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="pagina">
+
+    <a href="index.html" class="voltar">
+      <svg viewBox="0 0 24 24">
+        <path d="M9 14 4 9l5-5" />
+        <path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
+      </svg>
+      Voltar
+    </a>
+
+    <!-- Capa -->
+    <section class="capa">
+      <img class="capafoto" src="temaki logo.png" alt="Yakisoba">
+      <div class="capatexto">
+        <h1 class="capatitulo">Temakis</h1>
+        <span class="capasub">Temakis</span>
+      </div>
+    </section>
+
+    <!-- Loja 1 -->
+    <section class="loja">
+      <h2 class="lojatitulo">
+        <img class="lojalogo" src="Logo (3).png" alt="" />
+        Sooshi Lourdes
+      </h2>
+      <div class="gradepratos">
+        <a href="#" class="prato">
+          <img class="fotoprato" src="temaki (1).png" alt="Yakisoba Premium" />
+          <h3 class="nomeprato">Temaki a dois </h3>
+          <p class="precoprato">R$ 21,90</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://djapa.com.br/blog/comida-japonesa/temaki-conheca-alguns-sabores-desta-iguaria-japonesa/attachment/temaki-salmao-grelhado/" alt="Combinado 24 peças" />
+          <h3 class="nomeprato">Temaki Grelhado</h3>
+          <p class="precoprato">R$ 18,59</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://sushimusic.correka.com.br/_core/_uploads/144/2025/11/15530411252dkfjbh3ki.jpg" alt="Combinado 26 peças" />
+          <h3 class="nomeprato">Temaki Hot</h3>
+          <p class="precoprato">R$ 25,80</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Loja 2 -->
+    <section class="loja">
+      <h2 class="lojatitulo">
+        <img class="lojalogo" src="Logo (2).png" alt="" />
+        Sooshi Savassi
+      </h2>
+      <div class="gradepratos">
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://media-cdn.tripadvisor.com/media/photo-s/1d/3e/b4/1e/a5-japanese-wagyu-temaki.jpg" alt="Yakisoba Premium" />
+          <h3 class="nomeprato">temaki de wagyu </h3>
+          <p class="precoprato">R$ 70,99</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://i.pinimg.com/736x/0e/b1/92/0eb19247829d9645a038c71dc53b4a6d.jpg" alt="Combinado 24 peças" />
+          <h3 class="nomeprato">temaki de Peixe Branco</h3>
+          <p class="precoprato">R$ 17,52</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://cdn.vucasolution.com.br/upload/w_800/https://gryyplgyeyqb.compat.objectstorage.sa-saopaulo-1.oraclecloud.com/vuca-cdn/wasabi/arqs/produtos/n6os5qgpwkcfzse20zuw.jpg" alt="Combinado 26 peças" />
+          <h3 class="nomeprato">temaki de Polvo</h3>
+          <p class="precoprato">R$ 38,00</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Loja 3 -->
+    <section class="loja">
+      <h2 class="lojatitulo">
+        <img class="lojalogo" src="Logo (1).png" alt="" />
+        Sooshi Castelo
+      </h2>
+      <div class="gradepratos">
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://djapa.com.br/wp-content/uploads/2022/11/temaki-shimeji.jpg" alt="Yakisoba Premium" />
+          <h3 class="nomeprato">Temaki Vegano </h3>
+          <p class="precoprato">R$ 15,40</p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://static-images.ifood.com.br/pratos/edeaa7ca-b619-475a-a091-7840875b5843/202301311422_L5TO_i.jpg" alt="Combinado 24 peças" />
+          <h3 class="nomeprato">Temaki Filadélfia</h3>
+          <p class="precoprato">R$ 27,90 </p>
+        </a>
+        <a href="#" class="prato">
+          <img class="fotoprato" src="https://static-images.ifood.com.br/pratos/edeaa7ca-b619-475a-a091-7840875b5843/202301311421_TAUW_i.jpg" alt="Combinado 26 peças" />
+          <h3 class="nomeprato">Temaki de Camarão</h3>
+          <p class="precoprato">R$ 42,90</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="rodapegrade">
+
+      <div class="rodapemarca">
+        <a href="index.html" class="rodapelogo">
+          <img src="logo-sooshi.png" alt="" />
+          <span>Sooshi</span>
+        </a>
+        <p>Sushi fresquinho, feito na hora e entregue na sua porta.</p>
+
+        <div class="redes">
+          <a href="https://instagram.com/sooshi" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="https://wa.me/5531900000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24">
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+            </svg>
+          </a>
+          <a href="mailto:contato@sooshi.com.br" aria-label="E-mail">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Cardápio</h4>
+        <ul>
+          <li><a href="combinados.html">Combinados</a></li>
+          <li><a href="temaki.html">Temakis</a></li>
+          <li><a href="yakisoba.html">Yakisoba</a></li>
+          <li><a href="Poki.html">Poke</a></li>
+        </ul>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Sooshi</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#">Minha conta</a></li>
+          <li><a href="#">Meus pedidos</a></li>
+          <li><a href="#">Cidades atendidas</a></li>
+        </ul>
+      </div>
+
+      <div class="rodapecol">
+        <h4>Fale com a gente</h4>
+        <ul class="contatos">
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <a href="https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+MG" target="_blank"
+              rel="noopener">Belo Horizonte, MG</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <a href="tel:+5531900000000">(31) 97210-2286</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            <span>Todos os dias, 18h às 23h</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    </div>
+
+    <div class="direitos">
+      <p>© 2026 Sooshi. Todos os direitos reservados.</p>
+      <p><a href="#">Termos de uso</a> · <a href="#">Privacidade</a></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,603 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+}
+
+/* ================= ÍCONES (SVG) ================= */
+
+.busca svg,
+.btncidade svg,
+.carrinho svg,
+.voltar svg,
+.redes svg,
+.contatos svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ================= TOPO ================= */
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 6px 24px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+  overflow: visible;
+}
+
+#nomeLogo {
+  font-family: "Italiana", sans-serif;
+  font-weight: normal;
+}
+
+.esq {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 280px;
+  padding: 8px 12px;
+  background: #262626;
+  border: 1px solid #333;
+  border-radius: 30px;
+  color: #999;
+}
+
+.busca svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+.busca input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: #e8651a;
+}
+
+.carrinho {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.carrinho svg {
+  width: 22px;
+  height: 22px;
+}
+
+.carrinho:hover {
+  color: #e8651a;
+}
+
+/* ---------- Dropdown de cidades ---------- */
+
+.cidadebox {
+  position: relative;
+  display: inline-block;
+}
+
+.btncidade {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid #333;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  transition: border-color 0.2s;
+}
+
+.btncidade:hover {
+  border-color: #555;
+}
+
+.btncidade svg {
+  width: 10px;
+  height: 10px;
+  stroke-width: 3;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+.btncidade span {
+  pointer-events: none;
+}
+
+.btncidade.girar svg {
+  transform: rotate(180deg);
+}
+
+.listacidades {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 170px;
+  padding: 6px 0;
+  list-style: none;
+  background-color: #262626;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.listacidades.aberto {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.listacidades li {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.listacidades li:hover {
+  background-color: #333;
+  color: #e8651a;
+}
+
+/* ================= CONTEÚDO DA PÁGINA ================= */
+
+.pagina {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 16px 24px 72px;
+}
+
+/* ---------- Voltar ---------- */
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.voltar:hover {
+  color: #e8651a;
+}
+
+.voltar svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+/* ---------- Capa ---------- */
+
+.capa {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+  margin-top: 14px;
+  padding: 0 32px 0 220px;
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 70% 60%, #cf510d 0%, transparent 60%),
+    #cf510d;
+  box-shadow: 0 20px 40px rgba(200, 84, 15, 0.25);
+}
+
+.capafoto {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  height: 88%;
+  width: auto;
+  transform: translateY(-50%);
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.45));
+}
+
+.capatexto {
+  display: flex;
+  flex-direction: column;
+}
+
+.capatitulo {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.capasub {
+  margin: -6px 0 0 64px;
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(26, 26, 26, 0.7);
+}
+
+/* ---------- Lojas ---------- */
+
+.loja {
+  margin-top: 44px;
+}
+
+.lojatitulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #fff;
+}
+
+.lojalogo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #262626;
+}
+
+.gradepratos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ---------- Pratos ---------- */
+
+.prato {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.prato:hover {
+  transform: translateY(-4px);
+  border-color: rgba(232, 101, 26, 0.6);
+}
+
+.fotoprato {
+  width: 100%;
+  aspect-ratio: 1 / 0.72;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.nomeprato {
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 1px;
+}
+
+.precoprato {
+  margin-top: auto;
+  padding-top: 10px;
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ================= RODAPÉ ================= */
+
+.rodape {
+  position: relative;
+  margin-top: 40px;
+  padding: 56px 24px 0;
+  background: #1a1a1a;
+  border-top: 1px solid #2a2a2a;
+  color: #fff;
+}
+
+.rodape::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  width: 220px;
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, #cf510d, transparent);
+}
+
+.rodapegrade {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.4fr;
+  gap: 40px;
+  max-width: 920px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.rodapelogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Italiana", sans-serif;
+  font-size: 22px;
+}
+
+.rodapelogo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.rodapemarca p {
+  max-width: 240px;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #9a9a9a;
+}
+
+.rodapecol h4 {
+  margin-bottom: 16px;
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #e8651a;
+}
+
+.rodapecol ul {
+  list-style: none;
+}
+
+.rodapecol li {
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+.rodapecol a {
+  color: #9a9a9a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.rodapecol a:hover {
+  color: #e8651a;
+}
+
+.contatos li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contatos svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: #cf510d;
+}
+
+.redes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.redes a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  background: #262626;
+  border: 1px solid #333;
+  border-radius: 50%;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.redes a:hover {
+  background: #cf510d;
+  border-color: #cf510d;
+  transform: translateY(-2px);
+}
+
+.redes svg {
+  width: 18px;
+  height: 18px;
+}
+
+.direitos {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 0 28px;
+  border-top: 1px solid #2a2a2a;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #777;
+}
+
+.direitos a {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.direitos a:hover {
+  color: #e8651a;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 800px) {
+  .rodapegrade {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .rodapemarca {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .capa {
+    flex-direction: column;
+    padding: 24px 24px 28px;
+    text-align: center;
+  }
+
+  .capafoto {
+    position: static;
+    height: 120px;
+    margin-bottom: 8px;
+    transform: none;
+  }
+
+  .capatitulo {
+    font-size: 60px;
+  }
+
+  .capasub {
+    margin-left: 0;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .busca {
+    display: none;
+  }
+
+  .menu {
+    gap: 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo img {
+    height: 44px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gradepratos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .rodapegrade {
+    grid-template-columns: 1fr;
+  }
+
+  .direitos {
+    flex-direction: column;
+    text-align: center;
+  }
+}
